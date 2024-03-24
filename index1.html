@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHECK LIST GESTÃO DE CULTO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+<!-- Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Font Awesome JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+
+
+  <style>
+    body.dark-mode {
+      background-color: #222;
+      color: #fff;
+    }
+    .modal-content.dark-mode {
+      background-color: #333;
+      color: #fff;
+    }
+    .modal-header.dark-mode {
+      border-color: #444;
+    }
+    .modal-footer.dark-mode {
+      border-color: #444;
+    }
+    .form-check.dark-mode label {
+      color: #fff;
+    }
+
+    @media (max-width: 576px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+      .info-icon {
+        margin-left: 0.5rem;
+      }
+    }
+    /* Minimalist design styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    h2 {
+      font-size: 2.5rem;
+      color: #c2c0c0;
+      text-align: center;
+    }
+    h3 {
+      color: #c2c0c0;
+      text-align: center;
+    }
+    .form-check-label {
+      font-size: 1.1rem;
+    }
+    .info-icon {
+      color: #aa652d;
+      font-size: 1.2rem;
+      margin-left: 0.5rem;
+      cursor: pointer;
+    }
+    .info-icon:hover {
+      color: #aa652d;
+    }
+  </style>
+</head>
+<body class="dark-mode">
+
+<div class="container mt-5">
+  <h2>CHECK LIST</h2>
+  <h3 class="mb-4">GESTÃO DE CULTO</h3>
+  
+  <div class="form-check dark-mode">
+    <input class="form-check-input" type="checkbox" id="check1">
+    <label class="form-check-label " for="check1">
+      Chegar 1 hora antes do inicio do culto;
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" id="check2">
+    <label class="form-check-label " for="check2">
+      Usar colete do ministério;
+      <span class="info-icon" data-toggle="modal" data-target="#infoModal2"><i class="fas fa-info-circle"></i></span>
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" id="check3">
+    <label class="form-check-label " for="check3">
+      Verificar se cronograma está certo;
+      <span class="info-icon" data-toggle="modal" data-target="#infoModal3"><i class="fas fa-info-circle"></i></span>
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" id="check4">
+    <label class="form-check-label " for="check4">
+      Imprimir cronogramas <b>(Hype)</b>;
+      <span class="info-icon" data-toggle="modal" data-target="#infoModal4"><i class="fas fa-info-circle"></i></span>
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" id="check6">
+    <label class="form-check-label " for="check6">
+      Entregar e/ou repassar o cronograma;
+      <span class="info-icon" data-toggle="modal" data-target="#infoModal6"><i class="fas fa-info-circle"></i></span>
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" id="check7">
+    <label class="form-check-label " for="check7">
+      Confirmar última música do Louvor;
+      <span class="info-icon" data-toggle="modal" data-target="#infoModal7"><i class="fas fa-info-circle"></i></span>
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" id="check8">
+    <label class="form-check-label " for="check8">
+        Alinhar com a mesa de som;
+      <span class="info-icon" data-toggle="modal" data-target="#infoModal8"><i class="fas fa-info-circle"></i></span>
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" id="check9">
+    <label class="form-check-label " for="check9">
+      Alinhas com o multimidia;
+      <span class="info-icon" data-toggle="modal" data-target="#infoModal9"><i class="fas fa-info-circle"></i></span>
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" id="check10">
+    <label class="form-check-label " for="check10">
+      Colocar e retirar púlpito e água;
+      <span class="info-icon" data-toggle="modal" data-target="#infoModal10"><i class="fas fa-info-circle"></i></span>
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" id="check11">
+    <label class="form-check-label " for="check11">
+      Ligar/desligar luzes durante o culto;
+      <span class="info-icon" data-toggle="modal" data-target="#infoModal11"><i class="fas fa-info-circle"></i></span>
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" id="check12">
+    <label class="form-check-label " for="check12">
+      <b>Estar atento e sensível à Jesus!</b>
+    </label>
+  </div>
+
+  <div class="mt-4">
+    <p class="font-italic">
+        “Tudo o que fizerem, façam de todo o coração, como para o Senhor, e não para os homens, sabendo que receberão do Senhor a recompensa da herança. É a Cristo, o Senhor, que vocês estão servindo” 
+    </p>
+    Colossenses 3:23-24
+  </div>
+
+</div>
+
+<!-- Modal 2 -->
+<div class="modal fade" id="infoModal2" tabindex="-1" role="dialog" aria-labelledby="infoModal2Label" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content dark-mode">
+      <div class="modal-header">
+        <h5 class="modal-title" id="infoModal2Label">Usar colete do ministério</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Usar colete do ministério, encontrado no armario, em frente a sala do Check-In infantil. Isso serve para facil identificação da equipe e da liderança!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 3 -->
+<div class="modal fade" id="infoModal3" tabindex="-1" role="dialog" aria-labelledby="infoModal3Label" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content dark-mode">
+      <div class="modal-header">
+        <h5 class="modal-title" id="infoModal3Label">Verificar se cronograma está certo</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Verificar se cronograma está certo, conferindo com pregadores, equipe de louvor e liderança presente, caso tenha sido alterado alguma coisa.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="infoModal4" tabindex="-1" role="dialog" aria-labelledby="infoModal4Label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content dark-mode">
+        <div class="modal-header">
+          <h5 class="modal-title" id="infoModal4Label">Imprimir Cronogramas</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Imprimir Cronogramas, somente necessário para os cultos do Hype, por conta do cronograma ser menor!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="infoModal6" tabindex="-1" role="dialog" aria-labelledby="infoModal6Label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content dark-mode">
+        <div class="modal-header">
+          <h5 class="modal-title" id="infoModal6Label">Entregar e/ou repassar o cronograma</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Após imprimir, caso no Hype, repassar o cronograma com todos os envolvidos em cada etapa, explicando o que deve ser feito, e o tempo que tem</p>
+          <p>Ex: Abertura - Pedro - 05 min - 19:00 - 19:05</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="modal fade" id="infoModal7" tabindex="-1" role="dialog" aria-labelledby="infoModal7Label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content dark-mode">
+        <div class="modal-header">
+          <h5 class="modal-title" id="infoModal7Label">Confirmar última música do Louvor</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Quando repassar o cronograma com a equipe de Louvor, confirmar última música a ser tocada, para combinar o momento de entrada com o Pulpito</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="modal fade" id="infoModal8" tabindex="-1" role="dialog" aria-labelledby="infoModal8Label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content dark-mode">
+        <div class="modal-header">
+          <h5 class="modal-title" id="infoModal8Label">Alinhar com mesa de som</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Quando repassar o cronograma com a equipe do Som, conferir se os microfones estão certos, repassados e carregados, bem como se será necessario mais de 1 para o pregador</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="modal fade" id="infoModal9" tabindex="-1" role="dialog" aria-labelledby="infoModal9Label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content dark-mode">
+        <div class="modal-header">
+          <h5 class="modal-title" id="infoModal9Label">Alinhar com o multimidia</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Quando repassar o cronograma com a equipe do Multimidia, confirmar se todos os slides já foram testados, palavra, musica, avisos e outros</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="modal fade" id="infoModal10" tabindex="-1" role="dialog" aria-labelledby="infoModal10Label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content dark-mode">
+        <div class="modal-header">
+          <h5 class="modal-title" id="infoModal10Label">Colocar e retirar púlpito e água;</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Após a ultima música do louvor, colocar o púlpito e xicara/taça de água para o pregador;</p>
+          <p>Após o termino do culto, retirar e guardar o pulpito no local;</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="modal fade" id="infoModal11" tabindex="-1" role="dialog" aria-labelledby="infoModal11Label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content dark-mode">
+        <div class="modal-header">
+          <h5 class="modal-title" id="infoModal11Label">Ligar/Desligar as luzes</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Durante a celebração, devemos acender e apagar as luzes 6-12, baseado no momento em que estivermos:</p>
+          <!-- faça uma tabela com Momento e Luz como header -->
+          <table>
+            <tr>
+              <th>Momento</th>
+              <th>Luzes</th>
+            </tr>
+            <tr>
+              <td>Abertura</td>
+              <td>Apagadas</td>
+            </tr>
+            <tr>
+              <td>Louvor</td>
+              <td>Apagadas</td>
+            </tr>
+            <tr>
+              <td>Palavra</td>
+              <td>Acesas</td>
+            </tr>
+            <tr>
+              <td>Ministração</td>
+              <td>Apagadas</td>
+            </tr>
+            <tr>
+              <td>Avisos e Encerramento</td>
+              <td>Acesas</td>
+            </tr>
+          </table>
+          <!-- faça uma tabela com Momento e Luz como header -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+</body>
+</html>
+
